@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+table * {
+  font-size: 1.4rem;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+table thead tr {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+table thead th {
+  width: 25%;
+  padding: 1.4rem 0;
+  background-color: #04151a;
+  color: white;
+  border-top: solid 1px #4a808c98;
+  border-bottom: solid 1px #4a808c98;
+  font-size: 1.4rem;
+}
+
+table thead th:first-child{
+  padding: 1.4rem 1rem;
+}
+
+table thead th:first-child {
+  border-top-left-radius: 1rem;
+}
+
+table thead th:last-child {
+  border-top-right-radius: 1rem;
+}
+
+table tbody{
+  display: none;
+}
+
+table tbody.show {
+  display: block;
+  overflow: auto;
+  min-width: 100%;
+  max-height: 75vh;
+  border-left: solid 1px #4a808c98;
+  border-right: solid 1px #4a808c98;
+  border-radius: 0 0 .6rem .6rem;
+}
+
+table tbody tr {
+  display: flex;
+  align-items: center;
+}
+
+table tbody td{
+  color: white;
+}
+
+table tbody td {
+  width: 25%;
+  padding: 1rem 3rem;
+  color: white;
+}
+
+table tbody td:last-child{
+  padding: 0rem;
+}
+
+table tbody .user {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+table tbody .user img {
+  display: none;
+}
+
+td.user a {
+  text-decoration: none;
+}
+
+td.user a p {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+td.user a span{
+  display: none;
+}
+
+.remove {
+  background: none;
+  border: none;
+  color: #f75a68;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+table tbody::-webkit-scrollbar {
+  width: 10px;
+}
+
+table tbody::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+table tbody::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+table tbody::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+table tbody tr:nth-child(odd) {
+  background: #06181c;
+  border-bottom: 1px solid #4a808c;
+}
+
+table tbody tr:nth-child(even) {
+  background: #0a262e;
+  border-bottom: 1px solid #4a808c;
+}
+
+@media (min-width: 768px) {
+  table thead th {
+    width: 20%;
+    padding: 1.4rem 0;
+    background-color: #04151a;
+    color: white;
+    border-top: solid 1px #4a808c98;
+    border-bottom: solid 1px #4a808c98;
+    font-size: 1.4rem;
+  }
+
+  table thead th:first-child{
+    width: 40%;
+  }
+
+  table tbody td {
+    width: 20%;
+    padding: 1rem 3rem;
+    color: white;
+  }
+  
+  table tbody td:first-child{
+    width: 40%;
+  }
+
+  table tbody .user img {
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    border-radius: 100%;
+  }
+
+  td.user a span{
+    display: initial;
+  }
+}
